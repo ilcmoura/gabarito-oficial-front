@@ -1,0 +1,11 @@
+<go-page-top title="Listas de Exercícios" subtitle="listas de exercícios exclusivas"></go-page-top>
+
+<section class="content">
+
+  <div *ngFor='let el of exerciseLists'>
+    <p>
+    {{el?.id}} {{el?.description}}
+    </p>
+  </div>
+
+</section>
