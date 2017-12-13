@@ -19,7 +19,42 @@ export class ExerciseListComponent implements OnInit {
 
   constructor() { }
 
+  dtOptions: any = {};
+
   ngOnInit() {
+
+    this.dtOptions = {
+
+          data: this.exerciseLists,
+          columns: [{
+            title: 'ID',
+            data: 'id'
+          }, {
+            title: 'First name',
+            data: 'description'
+          }, {
+            title: 'Last name',
+            data: 'discipline'
+          }],
+          // Declare the use of the extension in the dom parameter
+          dom: 'Bfrtip',
+          // Configure the buttons
+          buttons: [
+            'columnsToggle',
+            'colvis',
+            'copy',
+            'print',
+            'excel',
+            {
+              text: 'Some button',
+              key: '1',
+              action: function (e, dt, node, config) {
+                alert('Button activated');
+              }
+            }
+          ]
+        };
+
   }
 
 }

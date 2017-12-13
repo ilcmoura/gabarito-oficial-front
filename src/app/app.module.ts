@@ -4,6 +4,8 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common'
 
 import { RouterModule, PreloadAllModules } from '@angular/router';
 
+import { DataTablesModule } from 'angular-datatables';
+
 import { ROUTES } from './app.routes'
 
 import { AppComponent } from './app.component';
@@ -16,6 +18,10 @@ import { ListSubjectLevelComponent } from './component/list-subject-level/list-s
 import { CollegeTestComponent } from './component/college-test/college-test.component';
 import { CourseComponent } from './component/course/course.component';
 import { PageTopComponent } from './common/page-top/page-top.component';
+import { InputComponent } from './shared/input/input.component';
+import { CourseBoxComponent } from './shared/course-box/course-box.component';
+import { RatingComponent } from './shared/rating/rating.component';
+import { MessagesComponent } from './shared/messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -28,10 +34,15 @@ import { PageTopComponent } from './common/page-top/page-top.component';
     ListSubjectLevelComponent,
     CollegeTestComponent,
     CourseComponent,
-    PageTopComponent
+    PageTopComponent,
+    InputComponent,
+    CourseBoxComponent,
+    RatingComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
+    DataTablesModule,
     RouterModule.forRoot(ROUTES, {preloadingStrategy: PreloadAllModules})
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy},

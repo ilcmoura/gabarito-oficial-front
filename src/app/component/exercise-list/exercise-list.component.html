@@ -2,10 +2,34 @@
 
 <section class="content">
 
-  <div *ngFor='let el of exerciseLists'>
-    <p>
-    {{el?.id}} {{el?.description}}
-    </p>
-  </div>
+  <div class="box box-primary">
+
+
+             <div class="box-body">
+  <table datatable class="row-border hover">
+    <thead>
+      <tr>
+        <th>Descrição</th>
+        <th>Disciplina</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let el of exerciseLists'>
+        <td> {{el?.description}}</td>
+        <td> {{el?.discipline}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+              <!-- /.box-body -->
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+          </div>
+          <!-- /.box -->
+
+
+          <table datatable [dtOptions]="dtOptions" class="row-border hover"></table>
 
 </section>
