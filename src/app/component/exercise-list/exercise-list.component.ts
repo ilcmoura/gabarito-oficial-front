@@ -27,13 +27,10 @@ export class ExerciseListComponent implements OnInit {
 
           data: this.exerciseLists,
           columns: [{
-            title: 'ID',
-            data: 'id'
-          }, {
-            title: 'First name',
+            title: 'Lista',
             data: 'description'
           }, {
-            title: 'Last name',
+            title: 'Disciplina',
             data: 'discipline'
           }],
           // Declare the use of the extension in the dom parameter

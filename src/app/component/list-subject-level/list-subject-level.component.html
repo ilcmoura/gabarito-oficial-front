@@ -1,7 +1,9 @@
 <go-page-top title="Material" subtitle="listas de exercícios por nível e assunto"></go-page-top>
 
 <section class="content">
-  <p>
-    list-subject-level works!
-  </p>
+
+  <div *ngFor='let lsl of listSubjectLevel'>
+    {{lsl.description}}
+  </div>
+
 </section>

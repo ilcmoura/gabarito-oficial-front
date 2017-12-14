@@ -22,6 +22,9 @@ import { InputComponent } from './shared/input/input.component';
 import { CourseBoxComponent } from './shared/course-box/course-box.component';
 import { RatingComponent } from './shared/rating/rating.component';
 import { MessagesComponent } from './shared/messages/messages.component';
+import { UserComponent } from './component/user/user.component';
+import { ProfileComponent } from './component/user/profile/profile.component';
+import { LoginComponent } from './component/user/login/login.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { MessagesComponent } from './shared/messages/messages.component';
     InputComponent,
     CourseBoxComponent,
     RatingComponent,
-    MessagesComponent
+    MessagesComponent,
+    UserComponent,
+    ProfileComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
